@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Dota2Matchticker</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <!--[if lte IE 8]>
+    <script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery.scrolly.min.js"></script>
+    <script src="/static/js/jquery.scrollzer.min.js"></script>
+    <script src="/static/js/skel.min.js"></script>
+    <script src="/static/js/skel-layers.min.js"></script>
+    <script src="/static/js/init.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="/static/css/skel.css"/>
+        <link rel="stylesheet" href="/static/css/style.css"/>
+        <link rel="stylesheet" href="/static/css/style-wide.css"/>
+    </noscript>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="css/ie/v9.css"/><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/ie/v8.css"/><![endif]-->
+    <link rel="shortcut icon" href="/static/images/dota2_logo.png">
+</head>
+<body>
+
+<!-- Header -->
+<div id="header" class="skel-layers-fixed">
+
+    <div class="top">
+
+        <!-- Logo -->
+        <div id="logo">
+            <span class="image avatar48"><img src="/static/images/dota2_logo.png" alt=""/></span>
+
+            <h1 id="title">Polling</h1>
+
+            <p>v0.0.1</p>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="/polls" id="live-matches" class="skel-layers-ignoreHref"><span
+                        class="dota2-logo">Polls</span></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="bottom">
+
+        <!-- Social Icons -->
+        <ul class="icons">
+            <li><a href="https://www.facebook.com/hoangnnbmt" class="icon fa-facebook"><span
+                    class="label">Facebook</span></a></li>
+            <li><a href="https://github.com/hoangnn93" class="icon fa-github"><span class="label">Github</span></a></li>
+            <li><a href="mailto:hoangnn93@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+
+    </div>
+
+</div>
+
+<!-- Main -->
+<div id="main">
+    <section class="two">
+        <header>
+            <h2>{{ poll.question }}</h2>
+        </header>
+        <div class="container">
+            {% for choice in poll.choice_set.all %}
+                <div class="row">
+                    <div class="4u match-tile">
+                        <article class="item match">
+                            <header>
+                                <h3>
+                                    <strong>{{ choice.choice }} has {{ choice.votes }} vote{{ choice.votes|pluralize }}</strong>
+                                </h3>
+                            </header>
+                        </article>
+                    </div>
+                </div>     
+            {% endfor %}
+            </form>
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<div id="footer">		
+	<!-- Copyright -->
+	<ul class="copyright">
+		<li>&copy; All rights reserved.</li><li>Design: <a href="http://hoangnn93.github.io">hoangnn93</a></li>
+	</ul>
+</div>
+
+</body>
+</html>
