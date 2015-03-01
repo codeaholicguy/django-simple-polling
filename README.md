@@ -13,3 +13,14 @@ How to run?
 
 python manage.py runserver
 
+How to access?
+
+127.0.0.1:8000/home
+
+How to add polling question?
+
+127.0.0.1:8000/admin
+
+username: admin
+
+password: password
