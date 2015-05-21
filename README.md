@@ -3,24 +3,24 @@ Simple Polling Site using Django
 
 How to install?
 
-Install pip: python easy_install pip
+Install pip: ```python easy_install pip```
 
-Install Django: python pip install django
+Install Django: ```python pip install django```
 
-Install pytz: python pip install pytz
+Install pytz: ```python pip install pytz```
 
 How to run?
 
-python manage.py runserver
+```python manage.py runserver```
 
 How to access?
 
-127.0.0.1:8000/home
+```127.0.0.1:8000/home```
 
 How to add polling question?
 
-127.0.0.1:8000/admin
+```127.0.0.1:8000/admin```
 
-username: admin
+```username: admin```
 
-password: password
+```password: password```
